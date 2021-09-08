@@ -1,3 +1,15 @@
 <div class="w-full max-w-2xl grid grid-cols-1 lg:grid-cols-2 gap-4 my-8 px-4 lg:mx-0">
 
+    {% if partners.partners %}
+
+        {% for item in partners.partners %}
+            <div class="p-5 border rounded border-gray-200 hover:border-purple-400">
+                <img src = "{{item.picture}}">
+                <h3>{{item.title}}</h3>
+                <p>{{item.desc | markdownit | safe }}</p>
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
 </div>

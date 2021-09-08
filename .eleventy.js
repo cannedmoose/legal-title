@@ -55,6 +55,12 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
+  const MarkdownIt = require("markdown-it");
+  const mdRender = new MarkdownIt();
+  eleventyConfig.addFilter("markdownit", function(rawString) {
+    return mdRender.render(rawString);
+  });
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
