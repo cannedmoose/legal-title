@@ -29,9 +29,19 @@
             {% endif %}
         </div>
 
-        <div class="flex flex-col items-end">
-            <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
-            <a href="mailto:{{ settings.email }}">{{ settings.email }}</a>
+        <div class="flex flex-col items-stretch ">
+            <a href="tel:{{ settings.phone }}" class="flex items-center">
+                <span class="pr-4 material-icons">phone_iphone</span><p>{{ settings.phone }}</p>
+            </a>
+            <a href="mailto:{{ settings.email }}" class="flex items-center">
+                <span class="pr-4 material-icons">email</span><p>{{ settings.email }}</p>
+            </a>
+            <a href="https://goo.gl/maps/Yau6eGT17jCGUSxE9" target="_blank" class="flex items-center">
+                <span class="pr-4 self-start material-icons">location_on</span>
+                <div class="whitespace-pre-wrap address">
+                {{ settings.address | markdownit | safe}}
+                </div>
+            </a>
         </div>
     </nav>
 </div>
