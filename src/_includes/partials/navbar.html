@@ -2,7 +2,7 @@
     <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
         <!--Logo etc-->
         <div class="flex items-center">
-            <img src="{{ settings.logo }}">
+            <img class="w-32" src="{{ settings.logo }}">
         </div>
 
         <!--Toggle button (hidden on large screens)-->
@@ -27,6 +27,10 @@
                 </ul>
 
             {% endif %}
+        </div>
+
+        <div class="flex items-center">
+            <a href="tel:{{ settings.phone }}">{{ settings.phone }}</a>
         </div>
     </nav>
 </div>
