@@ -47,18 +47,18 @@ collections:
             fields:
               - { label: Title, name: text, widget: string }
               - { label: URL, name: url, widget: string }
-      - label: "Quick Links"
-        name: "links"
-        file: "src/_data/quicklinks.yaml"
+      - label: "Partners"
+        name: "partners"
+        file: "src/_data/partners.yaml"
         fields:
-          - label: Nav Items
-            name: links
+          - label: Partner
+            name: partner
             widget: list
             collapsed: false
             fields:
-              - { label: Title, name: title, widget: string }
-              - { label: URL, name: url, widget: string }
-              - { label: Description, name: desc, widget: string }
+              - { label: Name, name: title, widget: string }
+              - { label: Picture, name: picture, widget: image }
+              - { label: Description, name: desc, widget: markdown }
       - label: "Meta Settings"
         name: "settings"
         file: "src/_data/settings.yaml"
