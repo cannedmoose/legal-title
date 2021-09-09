@@ -61,6 +61,9 @@ module.exports = function (eleventyConfig) {
     return mdRender.render(rawString);
   });
 
+  eleventyConfig.addPairedNunjucksShortcode("comment", function(_) {return ""});
+
+
   // Let Eleventy transform HTML files as nunjucks
   // So that we can use .html instead of .njk
   return {
