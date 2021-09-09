@@ -9,7 +9,18 @@
                 </div>
                 <div class="lg:p-8 p-4">
                     <h3  class="tracking-wide text-red-600 font-semibold">{{item.title}}</h3>
-                    <div class="mt-2">{{item.desc | markdownit | safe }}</div>
+                    <h4>
+                        License: {{item.license}}
+                        <a href="tel:{{ item.phone }}" class="flex items-center">
+                            <span class="pr-4 material-icons">phone_iphone</span>{{ item.phone }}
+                        </a>
+                        <a href="mailto:{{ item.email }}" class="flex items-center">
+                            <span class="pr-4 material-icons">email</span>{{ item.email }}
+                        </a>
+                    </h4>
+                    <div class="mt-2">
+                        {{item.desc | markdownit | safe }}
+                    </div>
                 </div>
                 </div>
             </div>

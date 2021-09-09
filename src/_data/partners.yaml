@@ -1,10 +1,10 @@
 partner:
   - title: Kerrie Anderson
     picture: /static/img/kerrie-anderson.webp
+    license: "05003113"
+    phone: 0432 901 751
+    email: kerrie@legaltitle.com.au
     desc: >-
-      #### Licence: 05003113
-
-
       Kerrie Anderson is a Licensed Conveyancer and a member of the Australian Institute of
 
       Conveyancers.
@@ -44,11 +44,10 @@ partner:
       settlement.
   - title: Andrea Laura Gonzalez
     picture: /static/img/andrea.webp
+    license: "05013684"
+    phone: 0432 901 751
+    email: andrea@legaltitle.com.au
     desc: >-
-      #### Licence: 05013684
-
-
-
       Andrea Gonzalez is a Licensed Conveyancer, with over 15 years experience.
 
 
