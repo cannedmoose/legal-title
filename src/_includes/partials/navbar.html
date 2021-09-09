@@ -1,10 +1,11 @@
 <div class=" w-full">
-    <nav class="flex items-center justify-center lg:justify-between flex-wrap p-6 lg:px-0 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
+    <nav class="flex items-center justify-center md:justify-between flex-wrap p-6 lg:px-2 container mx-auto" x-data="{ isOpen: false }" @keydown.escape="isOpen = false">
         <!--Logo etc-->
-        <div class="flex items-center">
+        <div class="flex items-center mb-2">
             <img class="w-32" src="{{ settings.logo }}">
         </div>
 
+        {% if navigation.items.length > 0%}
         <!--Toggle button (hidden on large screens)-->
         <button @click="isOpen = !isOpen" type="button" class="ml-auto block lg:hidden px-2 text-primary-500 hover:text-primary-500 focus:outline-none focus:text-primary-500" :class="{ 'transition transform-180': isOpen }" aria-label="Menu">
             <svg class="h-6 w-6 fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
@@ -16,8 +17,6 @@
         <!--Menu-->
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto text-center " :class="{ 'block shadow-3xl': isOpen, 'hidden': !isOpen }" @click.away="isOpen = false" x-show.transition="true">
 
-            {% if navigation.items %}
-
                 <ul class="pt-6 lg:pt-0 list-reset lg:flex justify-end flex-1 items-center">
                     {% for item in navigation.items %}
                         <li class="nav__item mr-3">
@@ -25,23 +24,10 @@
                         </li>
                     {% endfor %}
                 </ul>
-
-            {% endif %}
         </div>
 
-        <div class="flex flex-col items-stretch ">
-            <a href="tel:{{ settings.phone }}" class="flex items-center">
-                <span class="pr-4 material-icons">phone_iphone</span><p>{{ settings.phone }}</p>
-            </a>
-            <a href="mailto:{{ settings.email }}" class="flex items-center">
-                <span class="pr-4 material-icons">email</span><p>{{ settings.email }}</p>
-            </a>
-            <a href="https://goo.gl/maps/Yau6eGT17jCGUSxE9" target="_blank" class="flex items-center">
-                <span class="pr-4 self-start material-icons">location_on</span>
-                <div class="whitespace-pre-wrap address">
-                {{ settings.address | markdownit | safe}}
-                </div>
-            </a>
-        </div>
+        {% endif %}
+
+        {% include "./contact.html" %}
     </nav>
 </div>

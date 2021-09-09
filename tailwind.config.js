@@ -7,11 +7,17 @@ module.exports = {
     },
   },
   theme: {
+    fontFamily: {
+       'heading': ['Barlow Condensed','ui-sans-serif', 'system-ui']
+    },
     container: {
       center: true,
     },
     extend: {
-      colors: {},
+      colors: {
+        "red-600":"#D22027",
+        "gray-600":"#4D545A"
+      },
     },
   },
   variants: {},
