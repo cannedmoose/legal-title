@@ -19,6 +19,18 @@ module.exports = {
         "gray-600":"#4D545A"
       },
     },
+
+    listStyleType: {
+      none: 'none',
+
+       disc: 'disc',
+
+       decimal: 'decimal',
+
+       circle: 'circle',
+
+       roman: 'upper-roman',
+      }
   },
   variants: {},
   plugins: [require("@tailwindcss/typography")],
